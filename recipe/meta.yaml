@@ -1,7 +1,7 @@
 {% set name = "pydash" %}
-{% set version = "4.3.3" %}
+{% set version = "4.4.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "8317b52682e97a61390e20176e1fad2e17582a5b2c5ef57593f84a3231ed8967" %}
+{% set hash_value = "6af58d1c8d22744b854a6172fc8a8ac144a3e55f4871ae1862cd2ea752865a4b" %}
 
 package:
   name: '{{ name|lower }}'
