@@ -1,26 +1,22 @@
-{% set name = "pydash" %}
-{% set version = "4.4.1" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "eb6ef3603034d6a84ebc0f7616e73374a070f4d11dad381c24676799393ede38" %}
+{% set version = "4.6.0" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: pydash
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.tar.gz'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/p/pydash/pydash-{{ version }}.tar.gz
+  sha256: 16fb11da042359c2b0c7915b1ba6dd8a18e9e1002aa9e591bffec6af400edb28
 
 build:
   number: 0
   noarch: python
-  script: python setup.py install  --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
 
