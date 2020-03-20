@@ -1,4 +1,4 @@
-{% set version = "4.7.5" %}
+{% set version = "4.7.6" %}
 
 package:
   name: pydash
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pydash/pydash-{{ version }}.tar.gz
-  sha256: bc6fe03097634f5cf49f271ff6bb808a53a9950aa8ad24d93b6f4baaf6547b11
+  sha256: a7733886ab811e36510b44ff1de7ccc980327d701fb444a4b2ce395e6f4a4a87
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -36,3 +36,4 @@ about:
 extra:
   recipe-maintainers:
     - souravsingh
+    - dbast
