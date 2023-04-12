@@ -1,11 +1,11 @@
-About pydash
-============
+About pydash-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydash-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dgilland/pydash
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pydash-feedstock/blob/main/LICENSE.txt)
 
 Summary: The kitchen sink of Python utility libraries for doing "stuff" in a functional way.
 
