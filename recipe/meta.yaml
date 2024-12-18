@@ -5,20 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pydash/pydash-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pydash/pydash-{{ version }}.tar.gz
   sha256: a33fb17b4b06c617da5c57c711605d2dc8723311ee5388c8371f87cd44bf4112
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - typing_extensions
 
 test:
@@ -26,6 +27,7 @@ test:
     - pydash
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
