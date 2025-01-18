@@ -1,4 +1,4 @@
-{% set version = "8.0.4" %}
+{% set version = "8.0.5" %}
 
 package:
   name: pydash
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pydash/pydash-{{ version }}.tar.gz
-  sha256: a33fb17b4b06c617da5c57c711605d2dc8723311ee5388c8371f87cd44bf4112
+  sha256: 7cc44ebfe5d362f4f5f06c74c8684143c5ac481376b059ff02570705523f9e2e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
